@@ -1,0 +1,90 @@
+.reviews_tab {
+  position: relative;
+  width: 100%;
+}
+
+.review_tile {
+  max-width: 90vw;
+}
+
+.review_item {
+  margin-top: 11px;
+}
+
+/* Content */
+
+.review_content {
+  overflow: auto;
+
+  cursor: grabbing;
+
+  margin: 10px 50px 20px;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  border-radius: 5px;
+
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.author_tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.review_author {
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.review_data {
+  font-size: 0.7em;
+}
+
+.back_button {
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: 0;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.back_button:hover {
+  color: #ffa500;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767.98px) {
+  .reviews_tab {
+    position: relative;
+
+    width: clamp(260px, 100%, 700px) !important;
+  }
+
+  .review_item {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .cast_name {
+    font-size: 0.8em;
+  }
+
+  .cast_role > span {
+    font-size: 0.6em;
+  }
+  .cast_avatar {
+    width: 70px;
+    height: 80px;
+  }
+}

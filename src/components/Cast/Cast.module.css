@@ -1,0 +1,100 @@
+.cast_tab {
+  position: relative;
+
+  width: 100%;
+}
+
+.cast_tile {
+  margin-top: 15px;
+
+  padding: 0.5em 3em;
+
+  height: clamp(90px, 20vh, 140px);
+
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.05);
+
+  border-radius: 25px;
+}
+
+.avatar_box {
+  margin-right: 35px;
+}
+
+.cast_avatar {
+  width: 100px;
+  aspect-ratio: 1;
+
+  object-fit: cover;
+  object-position: top;
+  border-radius: 25px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cast_about_tile {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cast_name {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.cast_role > span {
+  font-weight: 700;
+
+  font-size: 0.8em;
+
+  letter-spacing: 0.1em;
+}
+
+.back_button {
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: 0;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.back_button:hover {
+  color: #ffa500;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767.98px) {
+  .cast_tab {
+    position: relative;
+
+    width: clamp(260px, 100%, 700px) !important;
+  }
+
+  .cast_tile {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .avatar_box {
+    margin: 15px;
+  }
+
+  .cast_name {
+    font-size: 0.8em;
+  }
+
+  .cast_role > span {
+    font-size: 0.6em;
+  }
+  .cast_avatar {
+    width: 70px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,324 @@
+.movies_tile {
+  position: relative;
+
+  height: calc(100vh - var(--header-height));
+  background-color: #000;
+}
+
+.movies_tile::after {
+  overflow: hidden;
+  z-index: -1;
+
+  position: absolute;
+
+  content: "";
+
+  left: 0;
+}
+
+.tile_image {
+  position: absolute;
+
+  width: 45vw;
+  height: 100%;
+
+  top: 0;
+  right: 0;
+
+  filter: contrast(110%);
+}
+
+.about_tile {
+  z-index: 1;
+  position: relative;
+
+  padding: 2em;
+
+  width: 55vw;
+  height: calc(100vh - var(--header-height));
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #0d0e12;
+
+  box-shadow: 0 0 100px 100px #0d0e12;
+}
+
+.title_link_tile {
+  position: relative;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.title_link_tile:hover {
+  transform: scale(1.01);
+}
+
+.title_tile {
+  overflow-wrap: break-word;
+  font-size: clamp(2em, 5vw, 4em);
+  letter-spacing: 0;
+
+  background-image: linear-gradient(45deg, #ffffff, #ffa500);
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
+
+.link_ico {
+  position: absolute;
+
+  fill: rgba(255, 225, 204, 0.8);
+  font-size: 12px;
+}
+
+.subtitle_tile {
+  margin: 15px 0px 20px;
+
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+
+  background-image: linear-gradient(45deg, #ffffff, #ffa500);
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
+
+.overview {
+  overflow: auto;
+  max-width: 90%;
+  margin-top: 20px;
+
+  flex-grow: 1;
+
+  font-weight: 300;
+  font-size: clamp(0.8em, 1.5vw, 1.2em);
+  letter-spacing: 0.15em;
+}
+
+.company {
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: row;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+.mySlide {
+  filter: drop-shadow(0 0 1px rgb(255, 255, 255));
+}
+
+.company_tile {
+  width: 70px;
+
+  text-align: center;
+}
+
+.mySlide:not(:last-child) {
+  margin-right: 20px;
+}
+
+.company_name {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.details_movie_value {
+  margin-bottom: 5px;
+
+  font-size: 0.9em;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.details_tile {
+  margin-bottom: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.genres_tile {
+  text-wrap: nowrap;
+
+  cursor: default;
+  position: relative;
+
+  padding: 5px 15px;
+
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.genres_tile:not(:last-child)::after {
+  position: absolute;
+
+  content: "";
+
+  top: 50%;
+  right: -13px;
+
+  transform: translateY(-50%);
+
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+
+  background-image: linear-gradient(45deg, #ec82f0, #ffa500);
+}
+
+.genres_tile:hover {
+  transform: scale(1.05);
+}
+
+.rating {
+  margin-left: 5px;
+}
+
+.movie_value {
+  font-weight: 700;
+  color: #999;
+}
+
+.tile_nav {
+  padding-bottom: 0.5em;
+
+  display: flex;
+  gap: 20px;
+}
+
+.tile_link {
+  padding: 4px 18px;
+
+  border-radius: 5px;
+
+  border: 1px solid #999;
+
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.tile_link:hover {
+  color: #dfdede;
+}
+
+.tile_link_active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 424.98px) {
+  .movies_tile {
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .details_tile {
+    gap: 15px;
+    row-gap: 5px;
+
+    font-size: 0.65em;
+  }
+
+  .genres_tile {
+    min-height: 20px;
+  }
+
+  .genres_tile:not(:last-child)::after {
+    right: -10px;
+
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media screen and (max-width: 947.98px) {
+  .movies_tile {
+    padding: 0;
+
+    padding-inline: 1em;
+  }
+
+  .title_tile {
+    margin-top: 0;
+    padding: 0;
+
+    font-size: 3em;
+  }
+
+  .subtitle_tile {
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
+
+  .tile_image {
+    width: 100%;
+  }
+
+  .about_tile {
+    padding-inline: 0;
+    padding-bottom: 0;
+    width: 100%;
+
+    background-color: rgba(13, 14, 18, 0.7);
+
+    box-shadow: 20px 20px 200px 220px rgba(13, 14, 18, 0.7);
+  }
+
+  .overview {
+    margin-top: 10px;
+
+    max-width: 100%;
+
+    padding-right: 20px;
+  }
+
+  .movie_value {
+    font-size: 0.8em;
+  }
+
+  .company {
+    padding-inline: 5px;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+}
+
+@media screen and (max-width: 1439.98px) {
+}

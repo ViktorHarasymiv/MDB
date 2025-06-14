@@ -1,0 +1,15 @@
+.button_back_page {
+  z-index: 9999;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+
+  font-weight: 300;
+  font-size: 0.85em;
+  letter-spacing: 0.2em;
+}
+
+.button_back_page:hover {
+  color: #a30c5d;
+  text-decoration: underline;
+}

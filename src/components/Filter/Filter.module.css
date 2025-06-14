@@ -1,0 +1,47 @@
+.filter_form {
+  align-self: flex-end;
+}
+
+.filter_tile {
+  line-height: 0;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+
+  background-image: linear-gradient(
+    1deg,
+    #7a0042 10%,
+    #c8006d 48%,
+    #e6007e
+  ) !important;
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
+
+.filter_ico {
+  margin-right: 5px;
+  font-size: 0.8em;
+  aspect-ratio: 1;
+  stroke-width: 1px;
+  stroke: #c8006d !important;
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter_form {
+    position: static;
+
+    max-width: 115px !important;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .filter_tile {
+    font-size: 0.7em !important;
+  }
+}

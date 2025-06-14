@@ -1,0 +1,263 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: normal;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87) !important;
+  background-color: #0d0e12;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --header-height: clamp(60px, 10vw, 100px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #f9f9f9;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #e6e6e6;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+main {
+  position: relative;
+  margin: var(--header-height) auto 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+section {
+  padding-inline: 2rem;
+}
+
+h1 {
+  font-size: clamp(1.8em, 8vw, 2.8em);
+
+  line-height: 1.1;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2.5em;
+
+  font-size: clamp(1.5em, 8vw, 2.5em);
+
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-size: clamp(0.8em, 3vw, 0.9em);
+}
+
+p,
+h2,
+h4 {
+  margin: 0;
+}
+
+/*  BUTTON  */
+
+button {
+  font-family: inherit;
+  padding: 0.1em 1.2em;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1em;
+  color: inherit;
+  font-weight: inherit;
+  letter-spacing: 0.2em;
+
+  white-space: nowrap;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  color: #e7e7e7 !important;
+  border-radius: 5px;
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.2s linear;
+}
+
+button:hover {
+  color: #242424;
+}
+
+/* INPUT */
+
+input {
+  margin: 0;
+  padding: 0;
+  padding-inline: 10px;
+
+  font-size: 1.3em;
+
+  color: rgba(0, 0, 0, 1);
+
+  border: none;
+}
+
+/* TEXT INPUT */
+
+input[type="text" i] {
+  padding-block: 0;
+
+  transition: backgroundColor 2s linear;
+
+  color: inherit;
+}
+
+/* SEARCH INPUT */
+
+input[type="search" i] {
+  width: 100%;
+  height: 100%;
+
+  font-size: 0.87em;
+  letter-spacing: 0.1em;
+
+  color: inherit;
+
+  list-style: none;
+  list-style-image: none;
+
+  background-color: #e7e7e7;
+
+  border-radius: 24px;
+
+  outline: none;
+
+  border: 2px solid transparent;
+}
+
+input[type="search" i]:hover {
+  background-color: rgb(40, 40, 40) !important;
+
+  transition: all 0.2s linear;
+}
+
+.pagination {
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: inherit !important;
+}
+
+.css-1c5o7vy-MuiPagination-ul {
+  gap: 7px;
+}
+
+.css-zeniru-MuiButtonBase-root-MuiPaginationItem-root {
+  font-weight: 300 !important;
+  line-height: 1 !important;
+  font-size: 0.7em !important;
+
+  max-width: 24px !important;
+  width: 100% !important;
+
+  border-radius: 5px !important;
+}
+
+.css-zeniru-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: transparent !important;
+
+  border-color: #cacaca !important;
+}
+
+.css-j218zi-MuiInputBase-root-MuiInput-root-MuiSelect-root::after {
+  border: 1px solid #c8006d !important;
+}
+
+.css-1lo99t4-MuiFormControl-root {
+  min-width: 130px !important;
+}
+
+.css-2hy7sk-MuiFormLabel-root-MuiInputLabel-root {
+  margin-right: 30px;
+  left: auto !important;
+  right: 0 !important;
+}
+
+.css-1gpuzre-MuiSvgIcon-root-MuiSelect-icon {
+  color: #c8006d !important;
+}
+
+.select_filter {
+  text-transform: capitalize;
+  -webkit-text-fill-color: #cacaca !important;
+}
+
+@media screen and (max-width: 767.98px) {
+  section {
+    padding-inline: 1em;
+  }
+}
+
+.section {
+  position: relative;
+}
+
+/* Зміна ширини скролу */
+::-webkit-scrollbar {
+  width: 3px; /* ширина вертикального скролу */
+  height: 3px; /* висота горизонтального скролу */
+}
+
+/* Стилізація фону треку скролу */
+::-webkit-scrollbar-track {
+  background: #505050; /* колір треку */
+  border-radius: 10px; /* скруглення треку */
+}
+
+/* Стилізація "повзунка" (scrollbar thumb) */
+::-webkit-scrollbar-thumb {
+  background: #2e2e2e; /* колір повзунка */
+  border-radius: 0; /* скруглення повзунка */
+}

@@ -1,0 +1,20 @@
+.slide_item_popular {
+  margin-block: 60px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .movie_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide_item_popular {
+    margin-block: 40px;
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  .slide_item_popular {
+    margin-top: 20px;
+  }
+}
